@@ -1,0 +1,208 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #fbfcf6;
+$subColor: #bea300;
+$keyColor: #14c0c9;
+$fontColor: #fff;
+
+
+/* Base
+------------------------------------------------------------*/
+html{font-size: 62.5%;}
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family: $baseFontFamily;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+a{
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+  p{
+    color:$fontColor;
+  }
+}
+
+img{
+    max-width: 100%;
+}
+
+
+/* Align
+------------------------------------------------------------*/
+.text-center{
+  text-align: center;
+}
+
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+// desktop
+@media (min-width: 769px){
+  
+  /* Base
+  ------------------------------------------------------------*/
+  a{
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+/* Header
+------------------------------------------------------------*/
+header {
+  background: url(../img/mv.jpg) center center;
+  background-size: cover;
+  height: 250px;
+    @media (min-width: 769px){
+    height: 500px;
+  }
+}
+
+
+/* Main
+------------------------------------------------------------*/
+// Common Styles
+main{
+  margin-top: -6px;
+}
+section {
+  padding: 60px 0;
+  .container{
+    width: 90%;
+    @extend .block-center;
+  }
+  h1 {
+    @extend .abel;
+    font-size: 3.2rem;
+    font-weight: bold;
+    line-height: 0.8em;
+    @extend .uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    span{
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+}
+
+// 2018オススメ映画
+#recommend{
+    background:$subColor;
+    .container{
+        @include display-flex;
+        justify-content:space-between;
+        @include flex-direction(column);
+          @media (min-width: 769px){
+            @include flex-direction(row);
+          }
+    }
+    .recommend-box {
+    margin: 15px;
+        h2 {
+            text-align: center;
+            padding: 5px 0;
+            font-size: 2rem;
+            background: $keyColor;
+            color:#fff;
+        }
+        p{
+            padding: 50px 30px;
+            height: 180px;
+            @include box-sizing(border-box);
+            @include text-shadow(0 0 1em rgba(0,0,0,0.9));
+        }
+        .new{
+            background: url(../img/new.jpg) no-repeat 50%;
+        }
+        .love{
+            background: url(../img/love.jpg) no-repeat 50%;
+        }
+        .entertainment{
+            background: url(../img/entertainment.jpg) no-repeat 50%;
+        }
+        .recommend-item{background-size: cover;}
+    }
+            @media (min-width: 769px){
+            .recommend-box{
+              width:33%;
+              a:hover{
+                text-decoration:none;
+              }
+              .recommend-item {
+                  height: 200px;
+                  padding-top: 65px;
+              }
+              .recommend-item:hover{
+                opacity:.7;
+              }
+            }
+
+        }
+}
+
+
+//リクエスト
+#request{
+   h2 {
+    @extend .abel;
+    color: #4c4c4c;
+    font-size: 2.5rem;
+    line-height: 0.8em;
+    @extend .uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    span{
+      font-size: 1.5rem;
+    }
+  }
+    button {
+        font-size:1.5rem;
+        color: $fontColor;
+        margin:0 auto;
+        padding: 10px 30px;
+        background-color: #14c0c9;
+        border-color: $keyColor;
+        @include border-radius;
+        @include box-shadow( 0 2px 2px 0 rgba(0, 188, 212, .14), 0 3px 1px -2px rgba(0, 188, 212, .2), 0 1px 5px 0 rgba(0, 188, 212, .12));
+
+          a{
+            color:$fontColor;
+          }
+    }
+}
+
+
+/* Footer
+------------------------------------------------------------*/
+footer{
+    background: $subColor;
+    text-align:center;
+}

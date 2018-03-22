@@ -1,0 +1,124 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #fbfcf6; }
+
+a {
+  color: #14c0c9;
+  text-decoration: none; }
+  a:visited {
+    color: #0f949b; }
+  a:hover {
+    color: #0f949b; }
+  a:active {
+    color: #16d6e0; }
+
+img {
+  max-width: 100%; }
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+/* Layout
+------------------------------------------------------------*/
+.block-center, section .container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Font
+------------------------------------------------------------*/
+.abel, section h2 {
+  font-family: 'Abel', sans-serif; }
+
+.uppercase, section h2 {
+  text-transform: uppercase; }
+
+@media (min-width: 769px) {
+  /* Base
+  ------------------------------------------------------------*/
+  a:hover {
+    text-decoration: underline; } }
+/* Header
+------------------------------------------------------------*/
+header {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center; }
+  header h1 {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3.3rem;
+    line-height: 0.8em;
+    color: #fff;
+    font-weight: bold; }
+    header h1 span {
+      font-size: 1.5rem; }
+
+/* Main
+------------------------------------------------------------*/
+main {
+  margin-top: -6px; }
+
+section {
+  padding: 60px 0; }
+  section .container {
+    width: 90%; }
+  section h2 {
+    font-size: 3.2rem; }
+
+#recommend {
+  background: #bea300; }
+  #recommend .container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: between;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  #recommend .recommend-box {
+    margin: 15px; }
+    #recommend .recommend-box h3 {
+      text-align: center;
+      padding: 5px 0;
+      font-size: 2rem;
+      background: #14c0c9;
+      color: #fff; }
+    #recommend .recommend-box p {
+      padding: 55px 30px 0;
+      height: 180px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+    #recommend .recommend-box .new {
+      background: url(../img/new.jpg) no-repeat 50%;
+      background-size: cover; }
+    #recommend .recommend-box .love {
+      background: url(../img/love.jpg) no-repeat 50%;
+      background-size: cover; }
+    #recommend .recommend-box .entertainment {
+      background: url(../img/entertainment.jpg) no-repeat 50%;
+      background-size: cover; }
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background: #bea300;
+  text-align: center; }
+
+/*# sourceMappingURL=style:css.map */
